@@ -1,5 +1,9 @@
 .body{
     font-family:  Arial, sans-serif;
+    background-image: url(/images/dinner-5537679_1280.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+   
 }
 
 .hidden{
@@ -45,22 +49,23 @@
 }
 
 .recipe{
-border: 1em, solid, lightgray;
+border: 5px, solid, lightgray;
 margin-top: 1em;
 text-align: center;
-border-radius: 2em;
+border-radius: 0.5em;
 margin: 1em;
+background-color: aliceblue;
 }
 
 .recipe img{
     width: 100%;
-    height: auto;
-    border-radius: 1em;
+    height: 50%;
+    border-radius: 0.5em;
     
 }
 
 .recipe button{
-    margin: 1em;
+    margin: 0.5em;
     padding: 1em;
     border-radius: 1em;
     border: 2px, solid, rgb(244, 171, 171);
