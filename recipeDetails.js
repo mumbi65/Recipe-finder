@@ -14,13 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><strong>Cautions:</strong> ${recipe.cautions.join(', ') || 'None'}</p>
             <p><strong>Total Weight:</strong> ${recipe.totalWeight ? recipe.totalWeight.toFixed(2) : 'N/A'} grams</p>
             <p><strong>Total Time:</strong> ${recipe.totalTime ? recipe.totalTime + ' minutes' : 'N/A'}</p>
+            <button id="favoritebutton">Add to Favorites</button>
+            <button id="backbutton">Back to Search Results</button>
+            
         `;
-    } else {
-        console.error('No recipe details found in local storage');
-    }
 
     // Back button event listener
     document.getElementById('backbutton').addEventListener('click', () => {
         window.history.back();
     });
+
+    // add to favorites button event listener
+    document.getElementById('favoritebutton').addEventListener('click', () => {
+        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        favorites.push(recipe)
+        localStorage.setItem('favorites', JSON.stringify(favorites))
+        alert('Recipe added to favorites')
+    })
+
+    } else {
+        console.error('No recipe details found in local storage');
+    }
+
+   
 });

@@ -1,83 +1,209 @@
-.body{
+body{
     font-family:  Arial, sans-serif;
-    background-image: url(/images/dinner-5537679_1280.png);
+    background-image: url(/images/recipe.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
    
 }
 
-.hidden{
-    display: none;
+header{
+    text-align: center;
+    padding: 1rem;
 }
 
-.heading{
-    text-align: center;
+h1{
+    margin: 0;
+}
+
+.mainContent{
+    padding: 20px;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .searchcontent{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-#searchinput{
+.searchinput{
+    width: 600px;
+    font-size: 16px;
     padding: 1.5em;
     border-radius: 1em;
     background-color: lightgrey;
-    border: 0.5px, solid, lightgray;
+    border: 0.5px solid lightgray;
 }
 
 
-#searchbutton{
-    margin-top: 1em;
-    padding: 0.5em;
+.searchbutton{
+    font-size: 16px;
+    padding: 0.5rem 0.5rem;
     border-radius: 1em;
-    background-color: linen;
-    border: solid, lightgray;
+    background-color:burlywood;
+    border: none;
+    cursor:pointer;
 }
 
 
 .searchbutton:hover{
-    color: darkgray;
+    background-color: lightgray;
 }
 
 .searchbutton:active{
-    color: coral;
+    background-color: coral;
 }
 
 #results{
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+    /* max-width: 1200px; */
 }
 
 .recipe{
-border: 5px, solid, lightgray;
-margin-top: 1em;
+border: 1px, solid, lightgray;
+padding: 20px;
+width: calc(25% - 40px);
 text-align: center;
-border-radius: 0.5em;
-margin: 1em;
+border-radius: 4px;
+margin: 10px;
 background-color: aliceblue;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
 }
 
 .recipe img{
-    width: 100%;
-    height: 50%;
-    border-radius: 0.5em;
-    
+    max-width: 100%;
+    border-radius: 4px;   
 }
 
-.recipe button{
+.recipe h3{
+    margin: 10px 0;
+}
+
+.recipe p{
+    margin: 5px 0;
+}
+
+button{
     margin: 0.5em;
-    padding: 1em;
+    padding: 1em 1em;
     border-radius: 1em;
-    border: 2px, solid, rgb(244, 171, 171);
+    border:none;
     background-color: rgb(244, 171, 171);
+    cursor: pointer;
 }
 
-.recipe button:hover{
-    color: darkgray;
+button:hover{
+    background-color: darkgray;
 }
 
-.footer{
+button#backbutton, button#favoritebutton{
+    display: block;
+    width: 50%;
+    margin: 10px 0;
+}
+
+footer{
     position:static;
+    width: 100%;
+    padding: 1rem;
+    background-color: #333;
     bottom: 0;
     text-align: center;
+    color: whitesmoke;
+}
+
+#details{
+    background-color: wheat;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#details img{
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+}
+
+#favorites{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.favorites{
+    background-color: wheat;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 20px;
+    width: calc(50% - 40px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.favorite img{
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.favorite h3{
+    margin: 10px 0;
+}
+
+.favorite p{
+    margin: 5px 0;
+}
+
+#backToSearchButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:darkgray;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#backToSearchButton:hover {
+    background-color: lightgray;
 }

@@ -1,5 +1,4 @@
-
-    {
+    document.addEventListener('DOMContentLoaded', () => {
         const applicationID = '23fda7aa';
         const applicationKey = '7ffe8772cb84f59861c8b70b7509742f';
     
@@ -35,10 +34,10 @@
                     <img src="${recipe.recipe.image}" />
                     <h3>${recipe.recipe.label}</h3>
                     <p>${recipe.recipe.source}</p>
-                    <button id='getDetailsBtn${id}'>Details</button>
+                    <button id='getDetailsbutton${id}'>Details</button>
                 `;
                 resultsContainer.appendChild(recipeContainer);
-                document.getElementById('getDetailsBtn' + id).addEventListener('click', function () {
+                document.getElementById('getDetailsbutton' + id).addEventListener('click', function () {
                     getAndDisplayRecipeDetails(encodeURIComponent(recipe.recipe.uri));
                 });
             });
@@ -84,6 +83,7 @@
                 document.getElementById('searchinput').value = searchQuery;
             }
         }
+
     
         // Event listener for the search form
         document.getElementById('searchform').addEventListener('submit', (event) => {
@@ -94,4 +94,4 @@
     
         // Restore search results on page load
         window.addEventListener('load', restoreSearchResults);
-    }
+    })
